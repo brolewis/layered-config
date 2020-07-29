@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>layered_config &mdash; layered-config - library for layering config files 2.0.2 documentation</title>
+  <title>layered_config &mdash; layered-config - A tool for managing layered config files! 2.0.2 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -49,7 +49,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> layered-config - library for layering config files
+            <a href="index.html" class="icon icon-home"> layered-config - A tool for managing layered config files!
           
 
           
@@ -89,7 +89,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="MAINTAINER.html">Maintainer’s Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="MAINTAINER.html#top-level-scripts">Top-level scripts:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MAINTAINER.html#bin-scripts"><code class="docutils literal notranslate"><span class="pre">bin/</span></code> scripts:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINER.html#jgt-tools-scripts">JGT Tools scripts:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTORS.html">Contributors</a></li>
@@ -107,7 +107,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">layered-config - library for layering config files</a>
+          <a href="index.html">layered-config - A tool for managing layered config files!</a>
         
       </nav>
 
@@ -169,7 +169,7 @@
 </dl>
 <p>Instead of copy’n’paste-ing related configuration files for different situations,
 refactor the configuration sections and keys into separate smaller configuration files.
-Then use this library to combine those files in various ways to produce a single <a class="reference external" href="https://docs.python.org/3/library/configparser.html#configparser.ConfigParser" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></a> object,
+Then use this library to combine those files in various ways to produce a single <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code> object,
 as if it had come from a single file.</p>
 <div class="section" id="tl-dr-quick-start-in-3-easy-steps">
 <h2>tl;dr Quick Start in 3 Easy Steps:<a class="headerlink" href="#tl-dr-quick-start-in-3-easy-steps" title="Permalink to this headline">¶</a></h2>
@@ -213,7 +213,7 @@ Your code needs to know its name, but this library doesn’t care.</p>
 <h3>3. What Just Happened?<a class="headerlink" href="#what-just-happened" title="Permalink to this headline">¶</a></h3>
 <p>The call to <code class="docutils literal notranslate"><span class="pre">load_cake</span></code>:</p>
 <ol class="arabic simple">
-<li><p>created a new empty <a class="reference external" href="https://docs.python.org/3/library/configparser.html#configparser.ConfigParser" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></a> object (see the API docs if you want to customize it).</p></li>
+<li><p>created a new empty <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code> object (see the API docs if you want to customize it).</p></li>
 <li><p>looked in the <code class="docutils literal notranslate"><span class="pre">master.config</span></code> file for a section matching the value of <code class="docutils literal notranslate"><span class="pre">config_section_name</span></code>.</p></li>
 <li><p>retrieved the value for the <code class="docutils literal notranslate"><span class="pre">layers</span></code> key of that section.</p></li>
 <li><p>processed the files in that value, from left to right,
@@ -227,7 +227,7 @@ and/or added to by, those in <code class="docutils literal notranslate"><span cl
 <h2>A few more details<a class="headerlink" href="#a-few-more-details" title="Permalink to this headline">¶</a></h2>
 <p>“Cake?” - yeah, layers of configuration files, we call a cake.
 There were many analogies to chose from, we chose cake.</p>
-<p>The result of loading a configuration cake is a plain ol’ Python <a class="reference external" href="https://docs.python.org/3/library/configparser.html#configparser.ConfigParser" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></a> instance,
+<p>The result of loading a configuration cake is a plain ol’ Python <code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code> instance,
 an old Python class we know and love. Or at least know.</p>
 <p>“Python’s <code class="docutils literal notranslate"><span class="pre">ConfigParser</span></code> already supports loading more than one configuration file like this, what gives?”</p>
 <blockquote>
@@ -263,11 +263,11 @@ Detailed comparative analysis to come in a future PR.</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Doug Philips
+        &copy; Copyright 2020, Doug Philips
       
         <span class="build">
           Build
-          <a href="https://github.com///github.com/jolly-good-toolbelt/layered-config/tree/227e30b465c2a9096e7ecd93f5fcd5aab6c0d582">227e30b465c2a9096e7ecd93f5fcd5aab6c0d582</a>.
+          <a href="https://github.com/brolewis/layered-config/tree/fef980a851597532645324ca843a4f48f4e75276">fef980a851597532645324ca843a4f48f4e75276</a>.
         </span>
       
 

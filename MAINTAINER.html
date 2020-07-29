@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Maintainer’s Documentation &mdash; layered-config - library for layering config files 2.0.2 documentation</title>
+  <title>Maintainer’s Documentation &mdash; layered-config - A tool for managing layered config files! 2.0.2 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -51,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> layered-config - library for layering config files
+            <a href="index.html" class="icon icon-home"> layered-config - A tool for managing layered config files!
           
 
           
@@ -91,7 +91,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Maintainer’s Documentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#top-level-scripts">Top-level scripts:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bin-scripts"><code class="docutils literal notranslate"><span class="pre">bin/</span></code> scripts:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jgt-tools-scripts">JGT Tools scripts:</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="CONTRIBUTORS.html">Contributors</a></li>
@@ -109,7 +109,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">layered-config - library for layering config files</a>
+          <a href="index.html">layered-config - A tool for managing layered config files!</a>
         
       </nav>
 
@@ -166,23 +166,17 @@
 <h2>Top-level scripts:<a class="headerlink" href="#top-level-scripts" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">env_setup.py</span></code> - setting up a new virtual environment.
-Uses poetry so if you like using the virtual environment poetry uses,
-you should be fine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">self_check.py</span></code> - validates the repo is in good shape.
-Uses <a class="reference external" href="https://pre-commit.com/">pre-commit</a> but you should use <code class="docutils literal notranslate"><span class="pre">self_check.py</span></code> instead in case other
-things are added and as a standard entrypoint common to many repos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bootstrap.sh</span></code> - downloads and runs the python bootstrap <code class="docutils literal notranslate"><span class="pre">env_setup.py</span></code>
+script from the <code class="docutils literal notranslate"><span class="pre">jgt_tools</span></code> GitHub repo,
+to set up your environment fully
+when you do not yet have <code class="docutils literal notranslate"><span class="pre">jgt_tools</span></code> installed in your virtual environment.</p></li>
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="bin-scripts">
-<h2><code class="docutils literal notranslate"><span class="pre">bin/</span></code> scripts:<a class="headerlink" href="#bin-scripts" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">build_docs.py</span></code> - build the documentation. Open <code class="docutils literal notranslate"><span class="pre">docs/index.html</span></code> to read the local docs.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">build_and_push_docs.py</span></code> - build the documentation then push to github pages for this repo.</p></li>
-</ul>
-</div></blockquote>
+<div class="section" id="jgt-tools-scripts">
+<h2>JGT Tools scripts:<a class="headerlink" href="#jgt-tools-scripts" title="Permalink to this headline">¶</a></h2>
+<p>This repo uses the scripts provided by <a class="reference external" href="https://jolly-good-toolbelt.github.io/jgt_tools/">jgt_tools</a>.
+See linked documentation for reference.</p>
 </div>
 </div>
 
@@ -206,11 +200,11 @@ things are added and as a standard entrypoint common to many repos.</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Doug Philips
+        &copy; Copyright 2020, Doug Philips
       
         <span class="build">
           Build
-          <a href="https://github.com///github.com/jolly-good-toolbelt/layered-config/tree/227e30b465c2a9096e7ecd93f5fcd5aab6c0d582">227e30b465c2a9096e7ecd93f5fcd5aab6c0d582</a>.
+          <a href="https://github.com/brolewis/layered-config/tree/fef980a851597532645324ca843a4f48f4e75276">fef980a851597532645324ca843a4f48f4e75276</a>.
         </span>
       
 
